@@ -1,0 +1,55 @@
+plugins {
+    id 'fabric-loom' version '1.14.10'
+}
+
+version = "${project.upstream_version}-custom-fre-${project.fre_version}"
+group = project.maven_group
+base { archivesName = project.archives_base_name }
+
+repositories {
+    mavenCentral()
+    exclusiveContent {
+        forRepository { maven { url = 'https://api.modrinth.com/maven' } }
+        filter { includeGroup 'maven.modrinth' }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modCompileOnly "maven.modrinth:modmenu:${project.modmenu_version}"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs += ['-Xmaxerrs', '500']
+}
+
+tasks.named('test', Test) { useJUnitPlatform() }
+
+processResources {
+    def metadata = [version: project.version, minecraft_version: project.minecraft_version,
+                    loader_version: project.loader_version, fre_version: project.fre_version]
+    inputs.properties(metadata)
+    filteringCharset = 'UTF-8'
+    filesMatching('fabric.mod.json') { expand(metadata) }
+}
+
+jar {
+    from('LICENSE') { rename { 'LICENSE_ATT2_fre' } }
+}
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

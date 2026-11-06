@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "att2",
+  "version": "${version}",
+  "name": "ATT2 fre",
+  "description": "Across The Time II client companion: custom HUD, quest journal, spell wheel, recipe tracking and redesigned map menus.",
+  "authors": [
+    "Poubone"
+  ],
+  "contributors": [
+    "Kenney (CC0 — RPG UI assets for the quest journal)",
+    "LukenSkyne / Ping Wheel (MIT — ping rendering, arrow and sound)",
+    "Codex / hookuru_ (Grand Teleport transition code)",
+    "Simuciokas (Flashback replay compatibility inspiration, MIT)"
+  ],
+  "license": "MIT",
+  "icon": "assets/att2/icon.jpg",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "fr.poubone.att2.client.ATT2_ProjectClient"
+    ],
+    "modmenu": [
+      "fr.poubone.att2.client.compat.Att2ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "att2.mixins.json",
+    "lootbeams.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=21"
+  },
+  "custom": {
+    "fre": {
+      "version": "${fre_version}",
+      "upstream_version": "2.0.7"
+    }
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
