@@ -1,7 +1,10 @@
 # ATT2 fre Fabric
 
-《Across The Time II — Time For Regrets》的客户端辅助模组修改版。
-基于 Poubone 的 ATT2 Mod 2.0.7，整合 fre 1.1.32 的界面与功能调整。
+《Across The Time II — Time For Regrets》的客户端辅助模组修改版
+
+基于 Poubone 的 ATT2 Mod 2.0.7，整合 fre 1.1.32 的界面与功能调整
+
+使用chatgpt 6.1 sol修改
 
 ## 版本与依赖
 
