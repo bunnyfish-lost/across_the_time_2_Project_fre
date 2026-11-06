@@ -1,7 +1,10 @@
-# ATT2 fre · Fabric
+# ATT2 fre Fabric
 
-《Across The Time II — Time For Regrets》的客户端辅助模组修改版。
-基于 Poubone 的 ATT2 Mod 2.0.7，整合 fre 1.1.32 的界面与功能调整。
+《Across The Time II — Time For Regrets》的客户端辅助模组修改版
+
+基于 Poubone 的 ATT2 Mod 2.0.7，整合 fre 1.1.32 的界面与功能调整
+
+使用chatgpt 6.1 sol修改
 
 ## 版本与依赖
 
@@ -12,7 +15,7 @@
 | Fabric API | 对应 Minecraft 1.21.11 的版本 |
 | Java | 21 或更新版本 |
 | fre 修改版 | 1.1.32 |
-| 官方基线 | 2.0.7 |
+| 官方基础版本 | 2.0.7 |
 
 本项目仅面向 Fabric 客户端，不包含 NeoForge 版本，也不需要服务端安装本模组。
 模组中的地图功能依赖 Across The Time II 的命令、物品和数据结构，不适用于普通生存世界。
