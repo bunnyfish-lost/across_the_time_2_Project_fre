@@ -36,11 +36,20 @@
 
 ## 部分功能图片展示
 
+- 任务书展示
 ![任务书展示](images/guide_book.png)
 
+- 法术轮盘功能展示
 ![法术轮盘展示](images/Magic_Roulette.png)
 
+- 部分本地化展示
 ![部分本地化设置展示](images/setting_chinese.png)
+
+- 可以缩小的标题界面
+![可以缩小的标题界面](images/small_title.png)
+
+- 添加了专门的设置来让该辅助模组在spatial_gui里表现更好
+！[att2_project_fre](images/spatial_gui%20in%20att2.png)
 
 ## 从源码构建
 
