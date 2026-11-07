@@ -34,6 +34,14 @@
 
 具体按键可在 Minecraft 的“选项 → 控制 → 按键绑定”中查看或修改。
 
+## 部分功能图片展示
+
+![任务书展示](images/guide_book.png)
+
+![法术轮盘展示](images/Magic_Roulette.png)
+
+![部分本地化设置展示](images/setting_chinese.png)
+
 ## 从源码构建
 
 需要 JDK 21 或更新版本和网络连接。项目自带 Gradle Wrapper，无需预先安装 Gradle。
