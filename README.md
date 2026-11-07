@@ -49,7 +49,7 @@
 ![可以缩小的标题界面](images/small_title.png)
 
 - 添加了专门的设置来让该辅助模组在spatial_gui里表现更好
-！[att2_project_fre](images/spatial_gui%20in%20att2.png)
+！[att2_project_fre](images/spatial_gui_in_att2.png)
 
 ## 从源码构建
 
